@@ -1,10 +1,20 @@
-# Replace with your domain
+# Caddy configuration with DNSMadeEasy DNS-01 challenge
+# Edit domains below to match your setup
+
+{
+    email {$ACME_EMAIL}
+}
+
+# Replace these with your actual domains
 example.com {
     tls {
         dns dnsmadeeasy {
-            api_key {env.DME_API_KEY}
-            secret_key {env.DME_SECRET_KEY}
+            api_key {$DME_API_KEY}
+            secret_key {$DME_SECRET_KEY}
         }
+        propagation_timeout 10m
+        propagation_delay 30s
+        resolvers 8.8.8.8 1.1.1.1
     }
     respond "Hello from Caddy with DME!"
 }
