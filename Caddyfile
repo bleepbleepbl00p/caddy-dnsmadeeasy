@@ -1,0 +1,10 @@
+# Replace with your domain
+example.com {
+    tls {
+        dns dnsmadeeasy {
+            api_key {env.DME_API_KEY}
+            secret_key {env.DME_SECRET_KEY}
+        }
+    }
+    respond "Hello from Caddy with DME!"
+}
