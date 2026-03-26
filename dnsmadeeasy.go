@@ -7,7 +7,7 @@ import (
 	"github.com/caddyserver/caddy/v2/caddyconfig/caddyfile"
 
 	dme "github.com/john-k/dnsmadeeasy"
-	"github.com/libdns/dnsmadeeasy"
+	dnsmadeeasy "github.com/bleepbleepbl00p/libdns-dnsmadeeasy"
 )
 
 // Provider wraps the provider implementation as a Caddy module.
